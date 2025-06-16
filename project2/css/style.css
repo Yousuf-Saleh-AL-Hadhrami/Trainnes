@@ -1,0 +1,48 @@
+.box {
+    width: 500px;
+    border: 1px solid #ccc;
+    height: 150px;
+    margin: 100px auto;  /* Center horizontally */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.div {
+    padding: 10px;
+}
+
+/* Centering button using Flexbox (needs a parent with display:flex) */
+.btn {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Table styling */
+.table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table th, .table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+/* Paragraph styling */
+.p {
+    color: #3112ae; 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+}

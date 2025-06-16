@@ -1,0 +1,13 @@
+/* :root{
+
+    --var-x: green;
+}
+
+body{
+
+    background-color: var(--var-x);
+} */
+
+.alert-danger{
+    background-color: red;
+}

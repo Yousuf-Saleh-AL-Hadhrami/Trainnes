@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page1</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+
+<!-- Internal Style  -->
+    <style>
+
+        body{
+            height: 100vh;
+            perspective: 1000px;
+        }
+        h1,h2,h3,h4,h5,h6{
+            background-color: red;
+            color:white !important;
+            font-family: 'Cairo';
+        }
+
+        .div1{
+            width: 100%;
+            background-color: red;
+        }
+
+        .btn {
+            text-decoration: none;
+            border: 1px solid #ccc;
+            padding: 5px;
+            color:white;
+        }
+
+        .btn-primary{
+           background-color: blue;
+       
+        }
+
+         .btn-danger{
+           background-color: red;
+
+        }
+
+           .btn-primary:hover{
+            background-color: rgba(0, 0, 255, .5)
+           }
+
+           .box{
+            width:400px;
+            border:1px solid #ccc;
+            height:100px;
+            margin: 100px;
+            overflow:auto;
+            padding: 5px 10px;
+            
+           }
+
+
+           table{
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+            text-align: center;
+           }
+
+           table th , td {
+            border: 1px solid #ccc;
+            padding: 8px;
+           }
+
+           img{
+             transition: transform 2s;
+             transform-style: preserve-3d;
+           }
+
+           img:hover{
+            transform: rotateY(180deg);
+           }
+
+       
+    </style>
+</head>
+<body>
+
+<!-- Inline style -->
+
+
+<h1>This is a Heading 1</h1>
+<h2>This is a Heading 2</h2>
+<h3>This is a Heading 3</h3>
+<h4>This is a Heading 4</h4>
+<h5>This is a Heading 5</h5>
+<h6>This is a Heading 6</h6>
+
+<div class='header'>This is Division </div>
+
+<section>Section</section>
+<main>Main</main>
+<header>Header</header>
+<footer>Footer</footer>
+<aside>Aside</aside>
+
+<hr>
+
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, beatae asperiores. Voluptates iure cum, necessitatibus ex quaerat impedit minus! Eius exercitationem numquam aperiam distinctio corporis cum eum consequatur, ex maiores.</p>
+
+
+<div class="box">
+<p class="inner-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ut neque ullam illo veritatis maiores necessitatibus ipsum cupiditate, beatae nostrum animi ex voluptatibus accusantium vel ad doloribus. Omnis, animi voluptate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolor placeat modi temporibus ipsa ratione ducimus animi, minus dolorem, id, exercitationem in laboriosam nobis magnam tempora. Nihil eaque ab nobis?</p>
+</div>
+
+<hr>
+
+<a href="https://www.google.com" class="btn btn-primary">Google</a>
+<a href="https://www.google.com">Facebook</a>
+<a href="https://www.google.com">Twitter</a>
+<a href="https://www.google.com">Youtube</a>
+
+<hr>
+
+<div class="div1">
+<img src="images/cat1.jpg" alt="">
+</div>
+
+
+<img src="images/cat1.jpg" alt="">
+<img src="images/cat1.jpg" alt="">
+<img src="images/cat1.jpg" alt="">
+<img src="images/cat1.jpg" alt="">
+
+<hr>
+
+<table>
+    <thead style="background-color: blue; color:white;">
+        <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+    <tr>
+        <td>10</td>
+        <td>Yousuf AL Hadhrami</td>
+        <td>Izki</td>
+        <td>
+            <a href="edit.html" class="btn btn-primary">Edit</a>
+            <a href="delete.html" class="btn btn-danger">Delete</a>
+        </td>
+    </tr>
+        </tbody>
+
+    
+</table>
+
+<hr>
+
+
+<form action="login.html" method="post">
+
+  <!-- ID Field -->
+  <div>
+    <label for="id">ID</label>
+    <input type="text" name="id" id="id" >
+  </div>
+
+  <!-- Name Field -->
+  <div>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" >
+  </div>
+
+  <!-- Skills Dropdown -->
+  <div>
+    <label for="skills">Select a skill</label>
+    <select name="skills" id="skills" >
+      <option value="">-- Select a skill --</option>
+      <option value="1">Option One</option>
+      <option value="2">Option Two</option>
+      <option value="3">Option Three</option>
+      <option value="4">Option Four</option>
+    </select>
+  </div>
+
+  <!-- Courses Checkboxes -->
+  <div>
+    <p>Select your courses:</p>
+    <input type="checkbox" name="courses" value="HTML" id="html">
+    <label for="html">HTML</label>
+
+    <input type="checkbox" name="courses" value="CSS" id="css">
+    <label for="css">CSS</label>
+
+    <input type="checkbox" name="courses" value="JavaScript" id="js">
+    <label for="js">JavaScript</label>
+
+    <input type="checkbox" name="courses" value="PHP" id="php">
+    <label for="php">PHP</label>
+  </div>
+
+   <div>
+      <input type="radio" name="gender" value="male"/> Male
+        <input type="radio" name="gender" value="female"/> Female
+    </div>  
+
+    <div>
+      <textarea name="message" id="" placeholder="write message ,,,,"></textarea>
+    </div>
+
+  <!-- Submit Button -->
+  <button type="submit">Save</button>
+
+</form>
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <!-- Front face -->
+    <div class="flip-card-front">
+      <img src="images/cat1.jpg" alt="Cat Image" />
+    </div>
+    <!-- Back face -->
+    <div class="flip-card-back">
+      <h3>Back Side</h3>
+      <p>This is the back of the card.</p>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
