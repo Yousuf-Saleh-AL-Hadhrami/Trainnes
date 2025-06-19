@@ -1,0 +1,22 @@
+.logo-img {
+  width: 50px;        /* or any fixed size that fits your layout */
+  height: auto;        /* maintain aspect ratio */
+  object-fit: contain; /* keeps the logo inside the box cleanly */
+}
+
+@media (max-width: 576px) {
+  .logo-img {
+    width: 80px;
+  }
+}
+
+.carousel-container {
+  max-width: 500px;     /* Adjust width as needed */
+  margin: 0 auto;       /* Center horizontally */
+  padding: 20px 0;
+}
+
+.carousel-inner img {
+  height: 300px;        /* Optional: set height for consistency */
+  object-fit: cover;    /* Keeps aspect ratio and fills the space */
+}
