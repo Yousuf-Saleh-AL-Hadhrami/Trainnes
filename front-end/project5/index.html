@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript data types</title>
+</head>
+<body>
+   
+    <div id="show"></div>
+
+<script>
+    let User = {
+        name:"Yousuf",
+        address: "Izki",
+        hobbies:{
+            One:"Programming",
+            Two:"Reading",
+        },
+        books: ['HTML','CSS','PHP']
+    }
+
+    let name = "Ali";
+
+    let myStringObject = JSON.stringify(User);
+
+    console.log(typeof User);
+    console.log(User); // Object
+
+    console.log(typeof myStringObject);
+    console.log(myStringObject);
+
+    console.log(typeof name);
+
+    // document.getElementById("show").innerHTML= myStringObject;
+
+
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json); // Log to console
+
+        // Display in the HTML element
+        const showDiv = document.getElementById('show');
+        showDiv.innerHTML = json.map(post => `
+          <div>
+            <h3>${post.title}</h3>
+            <p>${post.body}</p>
+            <hr>
+          </div>
+        `).join('');
+      })
+      .catch((error) => {
+        document.getElementById('show').innerText = 'Error loading data';
+        console.error('Error:', error);
+      });
+  </script>
+
+</body>
+</html>
+
+
+</script>
+</body>
+</html>
