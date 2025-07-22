@@ -36,7 +36,9 @@ function pre($obj){
 }
 
 
-class Person {
+require "./Lecturer.php";
+
+class Person extends Lecturer {
 
     public $name;
     public $address;
@@ -45,6 +47,7 @@ class Person {
     public $totalSalary = 0;
     protected $password;
     public static $counter = 0;
+    public bool $sign;
 
    public const GENDER = 18;
 
@@ -113,6 +116,10 @@ class Person {
     }
 
     public function printAll() {
+
+        if($this->sign)
+        {
+
         return "Name : " . $this->getName() . "<br>" .
                "Address : " . $this->getAddress() . " <br>" .
                "Job : " . $this->getJob() . " <br>" .
@@ -120,32 +127,30 @@ class Person {
                "Password : " . $this->getPassword() . "<br> " .
                "Number of objects from this class  : " . Person::$counter . "<br> " .
                "Total Salary : " . $this->totalSalary . "<br>";
+
+        } 
+
+        return "Sign first to print All information";
+    }
+
+    public static function getCounter(){
+
+        //$this->getName(); // can not put non-static method inside static method
+        //$this->name = "Ali"; // can not put non-static property inside static method
+        return self::$counter;
+    }
+
+    public function getCounter2(){
+
+        return self::$counter;
+    }
+
+    public function sign(bool $singnature)
+    {
+       $this->sign = $singnature;
+
+       return $this;
+
     }
 }
-
-// Usage
-$p1 = new Person("Yousuf", "Izki", "Programmer");
-$p2 = new Person("Yousuf1", "Izki", "Programmer");
-$p3 = new Person("Yousuf2", "Izki", "Programmer");
-
-
-echo $p1->setName("Yousuf")
-         ->setJob("Programmer")
-         ->addBouns(0.05)  // Adding 5% bonus
-         ->setPassword("123456")
-         ->printAll();      // Printing details
-
-         echo $p2->setName("Yousuf")
-         ->setJob("Programmer")
-         ->addBouns(0.05)  // Adding 5% bonus
-         ->setPassword("123456")
-         ->printAll();      // Printing details
-
-
-         echo $p3->setName("Yousuf")
-         ->setJob("Programmer")
-         ->addBouns(0.05)  // Adding 5% bonus
-         ->setPassword("123456")
-         ->printAll();      // Printing details
-
 
