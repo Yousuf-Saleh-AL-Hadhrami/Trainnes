@@ -3,6 +3,35 @@
 require_once "./Person.php";
 require_once "./Student.php";
 require_once "./Lecturer.php";
+require_once "./Animal.php";
+require_once "./House.php";
+
+
+
+/*
+
+  PHP OOP Concepts:
+
+  - class & obecjts
+  - properties & methods 
+  - constants & statics
+  - $this & self 
+  - constructor 
+  - inheritance 
+  - encapsulation 
+  - abstraction 
+  - polymorphism 
+  - interfaces 
+  - traits 
+  - namespaces 
+  - autoloading 
+  - composer 
+
+  - enums 
+  - object cloning 
+  - magic methods 
+  
+*/
 
 
 
@@ -13,6 +42,23 @@ require_once "./Lecturer.php";
 
 $yousuf = new Person("Yousuf","Izki","Programmer");
 $hind = new Student("Hind","AL Hamra","Programmer","26s19108","IT","Software Engineering",3.9);
+
+
+// Abstract and polymorphism
+$cat = new Cat();
+$dog = new Dog();
+
+// Interfaces implementation 
+
+$bayan = new Bayan();
+$bayan->stepOne();
+$bayan->stepTwo();
+$bayan->stepThree();
+$bayan->stepFour();
+$bayan->stepFive();
+
+
+
 // $hiba = new Lecturer(); // can't instantiate an abstract class
 
 // echo $p1->setName("Yousuf")
@@ -52,8 +98,18 @@ echo "<br>";
 // echo $yousuf->sayHello("Yousuf");
 echo "<br>";
 //echo $yousuf->sign(false)->printAll();
-echo $hind->sign(false)->printAll();
+//echo $hind->sign(false)->printAll();
 
 // Student::GENDER = 25; // constants can not be changed
  
 //echo Student::GENDER;
+
+//echo $cat->makeSound("Meow");
+//echo $dog->makeSound("Wah Wah");
+
+// echo $bayan->stepOne();
+// echo $bayan->stepTwo();
+// echo $bayan->toolOne();
+
+$hind->one();
+$hind->OneCar();

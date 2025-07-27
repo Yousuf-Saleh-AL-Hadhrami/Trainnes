@@ -1,9 +1,15 @@
 <?php 
 
 require_once "./Person.php";
+require_once "./HasHouse.php";
+require_once "./HasCar.php";
+
+
 
 class Student extends Person{
 
+    use HasHouse, HasCar;
+    
     public $student_id;
     public $student_dpt;
     public $student_sps;
