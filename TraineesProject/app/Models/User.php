@@ -16,6 +16,7 @@ class User extends Authenticatable
      * The attributes that are mass assignable.
      *
      * @var list<string>
+<<<<<<< HEAD
      * 
      * // Mass Assignement
      */    protected $fillable = [
@@ -23,6 +24,13 @@ class User extends Authenticatable
         'email',
         'password',
         "image"
+=======
+     */
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+>>>>>>> a08e8aa6b2fd5cad4aebd753b6c8da312818dde8
     ];
 
     /**

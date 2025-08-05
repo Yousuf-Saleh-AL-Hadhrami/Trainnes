@@ -40,7 +40,7 @@ require_once "./House.php";
 // $p2 = new Person("Yousuf1", "Izki", "Programmer");
 // $p3 = new Person("Yousuf2", "Izki", "Programmer");
 
-$yousuf = new Person("Yousuf","Izki","Programmer");
+$yousuf = new Person(j: "Programmer", add: "Izki" , n: "Yousuf" );
 $hind = new Student("Hind","AL Hamra","Programmer","26s19108","IT","Software Engineering",3.9);
 
 
