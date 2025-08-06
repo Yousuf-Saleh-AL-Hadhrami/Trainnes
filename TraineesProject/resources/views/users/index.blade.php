@@ -13,7 +13,6 @@
 @else
 
 <a class="btn btn-sm btn-info" href="{{ route('users.create') }}">Create User</a>
-<<<<<<< HEAD
 
 @if(Session::has('success'))
 <p class="alert alert-success mt-2">{{ session('success') }}</p>
@@ -25,12 +24,6 @@
  <tr class="bg-primary">
         <th>ID</th>
         <th>Image</th>
-=======
-<table class="table table-bordered table-hover my-2">
-    <thead>
- <tr class="my-bg-primary" style="background-color:red !important;">
-        <th>ID</th>
->>>>>>> a08e8aa6b2fd5cad4aebd753b6c8da312818dde8
         <th>Name</th>
         <th>Email</th>
         <th>Created_at</th>
@@ -45,27 +38,17 @@
 
 <tr>
     <td>{{ $user->id }}</td>
-<<<<<<< HEAD
     <td><img style="width:120px; border-radius: 50%; "src="{{ asset('storage/' . $user->image) }}" class=" card-img-top" alt="User Image"></td>
     <td>{{ $user->name }}</td>
     <td>{{ $user->email }}</td>
     <td>{{  $user->created_at->diffForHumans() }}</td>
     <td>{{  $user->updated_at->diffForHumans()}}</td>
-=======
-    <td>{{ $user->name }}</td>
-    <td>{{ $user->email }}</td>
-    <td>{{ $user->created_at }}</td>
-    <td>{{ $user->updated_at}}</td>
->>>>>>> a08e8aa6b2fd5cad4aebd753b6c8da312818dde8
     <td>
         <a class="btn btn-sm btn-primary" href= "{{ route('users.edit', $user->id) }}">Edit</a>
 
         <form class="d-inline-block"  action="{{ route('users.destroy',  $user->id) }}" method="post">
-<<<<<<< HEAD
             @method('DELETE')
             @csrf
-=======
->>>>>>> a08e8aa6b2fd5cad4aebd753b6c8da312818dde8
             <button class="btn btn-sm btn-danger" type="submit">Delete</button>
         </form>
     </td>

@@ -4,19 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
-=======
->>>>>>> a08e8aa6b2fd5cad4aebd753b6c8da312818dde8
 
 class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-<<<<<<< HEAD
 
     public function __construct()
     {
@@ -27,11 +23,6 @@ class UserController extends Controller
     public function index()
     {
         $users = User::paginate(10);
-=======
-    public function index()
-    {
-        $users = User::paginate(3);
->>>>>>> a08e8aa6b2fd5cad4aebd753b6c8da312818dde8
 
         return view("users.index", compact("users"));
     }
@@ -41,17 +32,12 @@ class UserController extends Controller
      */
     public function create()
     {
-<<<<<<< HEAD
     return view("users.create");
-=======
-        //
->>>>>>> a08e8aa6b2fd5cad4aebd753b6c8da312818dde8
     }
 
     /**
      * Store a newly created resource in storage.
      */
-<<<<<<< HEAD
    public function store(Request $request)
 {
     // Validate input (optional but recommended)
@@ -83,13 +69,6 @@ class UserController extends Controller
         ->with('success', "User {$user->name} ({$user->email}) created successfully!");
 }
 
-=======
-    public function store(Request $request)
-    {
-        //
-    }
-
->>>>>>> a08e8aa6b2fd5cad4aebd753b6c8da312818dde8
     /**
      * Display the specified resource.
      */
@@ -103,13 +82,9 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-<<<<<<< HEAD
         $user = User::findOrFail($id);
 
         return view("users.edit", compact("user"));
-=======
-        //
->>>>>>> a08e8aa6b2fd5cad4aebd753b6c8da312818dde8
     }
 
     /**
@@ -117,7 +92,6 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-<<<<<<< HEAD
         $user = User::findOrFail($id);
 
         // dd($user);
@@ -131,9 +105,6 @@ class UserController extends Controller
        return redirect()->route("users.index")->with("success","User " . $user->name . "Updated Sucessfuly");        
         
         
-=======
-        //
->>>>>>> a08e8aa6b2fd5cad4aebd753b6c8da312818dde8
     }
 
     /**
@@ -141,13 +112,9 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-<<<<<<< HEAD
         $user = User::findOrFail($id);
         $user->delete();
 
         return redirect()->route("users.index")->with("success","User" .    $user->name . " Deleted!");
-=======
-        //
->>>>>>> a08e8aa6b2fd5cad4aebd753b6c8da312818dde8
     }
 }
