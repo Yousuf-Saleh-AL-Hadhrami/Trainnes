@@ -2,8 +2,11 @@
 
 namespace App\Providers;
 
+use AppendIterator;
+use Carbon\Carbon;
 use Illuminate\Pagination\Paginator;
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
 
 
@@ -23,6 +26,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Paginator::useBootstrap(); // for Bootstrap 5
+
+        // Carbon::setLocale('en');
+
+        // App::setLocale("ar");
 
     }
 }
