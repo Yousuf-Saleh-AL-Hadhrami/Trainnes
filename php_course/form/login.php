@@ -1,4 +1,13 @@
-<?php session_start() ?>
+<?php 
+
+session_start();
+
+setCookie("yousuf",bin2hex("yousuf programmer"), time() + 30 * 24 * 60 * 60);
+
+
+echo $_SERVER["REQUEST_METHOD"];
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,25 +21,47 @@
 
 <?php 
 
+-
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $user = "admin";
+  echo $_SERVER["REQUEST_METHOD"];
 
-    if($user == $_POST['username']){
+  $username= $_POST['username'];
+  $password= $_POST['password'];
 
-        $_SESSION['is_login'] = true;
-        $_SESSION['username'] = "Ali";
+    $users = [
+      ["username" => "admin", "name" => "Yousuf AL Hadhrami", "password" => "123456"],
+      ["username" => "ali", "name"=> "Ali AL Hadhrami", "password" => "123456"],
+    ];
 
-        header("location: page2.php");
-        exit;
+    foreach($users as $user){
+  
+      if($user && $user['username'] == $username){
+
+        if($user['password'] == $password){
+
+         $_SESSION['username'] = $user['username'];
+         $_SESSION['name'] = $user['name'];
+         $_SESSION['is_login'] = true;
+
+         header("location: page2.php");
+         exit;
+
+      } else {
+
+        echo "Username and poassword incorreect!";
+      }
     }
+
+    }
+   
 
 }
 
 
 ?>
     
-  <form action="" method="post">
+  <form action="" method="post" autocomplete="off">
     <label for="username">Username:</label><br>
     <input type="text" id="username" name="username" ><br><br>
 
