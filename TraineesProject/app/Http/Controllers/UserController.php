@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\WelcomeMail;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-
+use Illuminate\Support\Facades\Mail;
 
 class UserController extends Controller
 {
@@ -63,6 +64,8 @@ class UserController extends Controller
 
     // Create user
     $user = User::create($data);
+
+    Mail::to('izkiboy@gmail.com')->send(new WelcomeMail($user));
 
     return redirect()
         ->route('users.index')

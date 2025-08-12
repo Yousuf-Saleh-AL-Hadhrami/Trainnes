@@ -3,7 +3,9 @@
 use App\Http\Controllers\MyCustomLogin;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Mail\WelcomeMail;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 
@@ -25,5 +27,12 @@ use Illuminate\Support\Facades\Route;
 
     Route::post('customlogin', [MyCustomLogin::class, 'login'])->name('customlogin');
 
+    Route::get('send-email', function(){
+
+        // Mail::to('izkiboy@gmail.com')->send(new WelcomeMail());
+
+        return response('Email Has Been Sent');
+
+    })->middleware('auth');
 
 require __DIR__.'/auth.php';
