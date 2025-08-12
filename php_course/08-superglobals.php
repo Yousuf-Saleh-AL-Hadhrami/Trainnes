@@ -14,6 +14,8 @@
 
 echo "<pre>";
 
+$_REQUEST["yousuf"];
+
 var_dump($_SERVER);
 
 ?>
