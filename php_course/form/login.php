@@ -4,6 +4,7 @@ session_start();
 
 setCookie("yousuf",bin2hex("yousuf programmer"), time() + 30 * 24 * 60 * 60);
 
+//echo $_COOKIE["yousuf"];
 
 echo $_SERVER["REQUEST_METHOD"];
 
@@ -72,3 +73,5 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 </body>
 </html>
+
+

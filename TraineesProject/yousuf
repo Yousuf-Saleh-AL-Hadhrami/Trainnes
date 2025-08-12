@@ -1,0 +1,10 @@
+
+<?php
+
+echo "You have succesffuly run yousuf page";
+
+echo date_default_timezone_set("Asia/Muscat") . PHP_EOL; ;
+
+echo date_default_timezone_get() . PHP_EOL;;
+
+echo date("Y-m-d H:i:s") . PHP_EOL;;
